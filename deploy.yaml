@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+   name: Kubernetes-api-service
+   labels:
+    app: Kubernetes-service
+spec:
+  ports:
+  - port: 80
+    targetPort: 4004
+  selector:
+    app: Kubernetes-service
+  type: LoadBalancer
+
+  
